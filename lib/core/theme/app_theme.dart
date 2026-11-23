@@ -7,10 +7,10 @@ class AppTheme {
   static ThemeData getAppTheme() {
     return ThemeData(
       // scaffoldBackgroundColor
-      scaffoldBackgroundColor: AppColor.myWhite,
+      scaffoldBackgroundColor: AppColor.white,
       // appBarTheme
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColor.myWhite,
+        backgroundColor: AppColor.white,
         elevation: 0,
         scrolledUnderElevation: 0,
         centerTitle: true,
@@ -19,24 +19,24 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColor.honey,
-          foregroundColor: AppColor.myWhite,
+          foregroundColor: AppColor.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14.r),
           ),
           elevation: 5,
           alignment: Alignment.center,
-          textStyle: TextStyle(fontSize: 18.sp, color: AppColor.myWhite),
+          textStyle: TextStyle(fontSize: 18.sp, color: AppColor.white),
         ),
       ),
       // textfield
       inputDecorationTheme: InputDecorationTheme(
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
-          borderSide: BorderSide(color: AppColor.myBorderColor),
+          borderSide: BorderSide(color: AppColor.borderColor),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
-          borderSide: BorderSide(color: AppColor.myBorderColor),
+          borderSide: BorderSide(color: AppColor.borderColor),
         ),
       ),
       // text theme

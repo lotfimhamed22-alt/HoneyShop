@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:honeyshop/core/constants/app_assets.dart';
-import 'package:honeyshop/feature/onboarding/view/onboarding_view.dart';
+import 'package:honeyshop/core/shared_widgets/content_wrapper.dart';
+import 'package:honeyshop/feature/onboarding/presentation/view/screen/onboarding_view.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -24,8 +25,13 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Column(children: [Image.asset(AppAssets.logo)])),
+    return ContentWrapper(
+      child: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Image.asset(AppAssets.logo)],
+        ),
+      ),
     );
   }
 }

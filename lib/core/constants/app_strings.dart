@@ -1,5 +1,17 @@
 class AppStrings {
-  // texts
+  // short and long texts for onboarding
+  static final String textOnboarding1 = "Welcome to HoneyShop";
+  static final String textOnboarding2 = "Easy to Buy";
+  static final String textOnboarding3 = "Wonderful User Experience";
+  static final String onboarding1 =
+      "Discover a world of endless\n possibilities and shop from\n the comfort of your fingertips\n Browse through a wide range\n of products, from fashion\n and electronics to home.";
+  static final String onboarding2 =
+      "Find the perfect item that suits your style and\n needs With secure payment options and fast\n delivery, shopping has never been easier.";
+  static final String onboarding3 =
+      "Start exploring now and experience the\n convenience of online shopping at its best.";
+  // onboarding
+  static final String next = "Next";
+  static final String getStarted = "Get Start";
   // lable text
   static final String emailLable = 'You@gmail.com';
   static final String password = 'Password';

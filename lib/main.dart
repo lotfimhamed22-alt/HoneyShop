@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(theme: AppTheme.getAppTheme(), home: Splash());
+        return MaterialApp(
+          theme: AppTheme.getAppTheme(),
+          home: Splash(),
+          debugShowCheckedModeBanner: false,
+        );
       },
     );
   }

@@ -4,8 +4,8 @@ import 'package:honeyshop/core/constants/app_strings.dart';
 import 'package:honeyshop/core/shared_widgets/button_shared_widget.dart';
 import 'package:honeyshop/core/shared_widgets/content_wrapper.dart';
 import 'package:honeyshop/core/utils/responsive_size.dart';
-import 'package:honeyshop/feature/auth/presentation/view/screens/login_screen.dart';
 import 'package:honeyshop/feature/onboarding/data/model/onboarding_model.dart';
+import 'package:honeyshop/feature/onboarding/data/repo/onboarding_repo.dart';
 import 'package:honeyshop/feature/onboarding/presentation/view/widgets/page_view_widget.dart';
 
 class OnboardingView extends StatefulWidget {
@@ -43,20 +43,12 @@ class _OnboardingViewState extends State<OnboardingView> {
             ButtonSharedWidget(
               text: currentIndex == 2 ? AppStrings.getStarted : AppStrings.next,
               onPressed: () {
-                currentIndex++;
-                if (currentIndex > onboardingPages.length - 1) {
-                  //navigator
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (_) => LoginScreen()),
-                  );
-                } else {
-                  controller.animateToPage(
-                    currentIndex,
-                    duration: Duration(milliseconds: 800),
-                    curve: Curves.linear,
-                  );
-                }
+                OnboardingRepo().toNextPage(
+                  currentIndex,
+                  context,
+                  onboardingPages.length,
+                  controller,
+                );
               },
             ),
           ],
